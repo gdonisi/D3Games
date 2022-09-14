@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, var(--side), var(--secondary)) no-repeat fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    position: absolute;
+    margin-top: 48px;
+    margin-bottom: 36px;
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.center h1 {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid silver;
+}
+
+.center form {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+form .txt_field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 20px 0;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 0 3px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    top: -5px;
+    color: var(--primary);
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+    width: 100%;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: var(--primary);
+    border-radius: 25px;
+    font-size: 18px;
+    color: var(--d3light);
+    margin-bottom: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover {
+    transition: .5s;
+}
+
+#categoria {
+    margin-bottom: 8px;
+}
+
+#copertina {
+    margin-bottom: 20px;
+}
+
+#liveAlertPlaceholder ul {
+    margin-bottom: 0;
+    font-size: 14px;
+    padding-left: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .center {
+        width: 360px;
+    }
+}

@@ -1,0 +1,35 @@
+@keyframes mymove {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes mymoveback {
+    from {
+        transform: scale(1.05);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.card {
+    -webkit-animation: mymove 0.2s;
+    -webkit-animation-fill-mode: forwards;
+    animation: mymoveback 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.card:hover {
+    cursor: pointer;
+    -webkit-animation-fill-mode: forwards;
+    animation: mymove 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.col-sm {
+    max-width: 14.5rem;
+}

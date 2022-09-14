@@ -1,0 +1,63 @@
+.platf {
+    background: var(--secondary);
+    width: max-content;
+    padding: 2px 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.platf:hover {
+    background: var(--side);
+}
+
+.platf a {
+    color: var(--d3light);
+    text-decoration: none;
+}
+
+.sconto {
+    background: var(--primary);
+    font-weight: bold;
+    color: var(--d3light);
+    font-size: 18px;
+    padding: 3px 5px;
+}
+
+.col-md-7 > .bi {
+    color: #ffa41c;
+}
+
+.categ a {
+    color: #555;
+}
+
+.prezzo {
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 8px;
+}
+
+#quantita {
+    border: 1px solid #ccc;
+    font-weight: bold;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+}
+
+.carrello {
+    margin-left: 16px;
+}
+
+/* Rimuove le freccette dal selettore di quantità */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

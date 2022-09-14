@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <title>Carrello - D3Games</title>
+    <meta content="E-Commerce di videogiochi" name="description">
+    <meta content="#6e00ee" name="theme-color">
+    <link href="images/favicon.png" rel="icon" type="image/png"/>
+    <meta content="height=device-height, width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/scripts.js"></script>
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/prenotazione.css" rel="stylesheet">
+</head>
+<body>
+<div class="center">
+    <h1>Prenotazione</h1>
+    <form enctype="multipart/form-data" id="bookForm">
+        <div class="txt_field">
+            <input id="email" name="email" required type="text" value="utente@email.com">
+            <span></span>
+            <label for="email">Email</label>
+        </div>
+        <div class="txt_field">
+            <input id="nomeProdotto" name="nomeProdotto" required type="text">
+            <span></span>
+            <label for="nomeProdotto">Nome gioco</label>
+        </div>
+        <div class="txt_field">
+            <input id="descrizione" name="descrizione" required type="text">
+            <span></span>
+            <label for="descrizione">Descrizione</label>
+        </div>
+        <select class="form-select" id="categoria" name="categoria" required>
+            <option selected value="Action/Adventure">Action/Adventure</option>
+            <option value="Platform">Platform</option>
+            <option value="Guida">Guida</option>
+            <option value="Picchiaduro">Picchiaduro</option>
+            <option value="RPG">RPG</option>
+            <option value="Sparatutto">Sparatutto</option>
+            <option value="Simulazione">Simulazione</option>
+            <option value="Sport">Sport</option>
+            <option value="Strategia">Strategia</option>
+        </select>
+        <div>
+            <label for="copertina">Immagine</label>
+            <input accept=".jpg,.png" disabled id="copertina" name="copertina" type="file">
+        </div>
+        <div id="liveAlertPlaceholder"></div>
+        <input id="submitButton" type="submit" value="Prenota">
+    </form>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#bookForm').submit(false);
+        $('#submitButton').click(function () {
+            window.location.href = 'prenotazione_effettuata'
+        });
+    });
+</script>
+</body>
+</html>

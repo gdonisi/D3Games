@@ -1,0 +1,112 @@
+footer { /* Posiziona il footer in basso */
+    background: var(--primary);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 200px;
+    padding-top: 14px;
+}
+
+#footerlogo {
+    width: 72px;
+    height: 72px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 16px;
+    margin: 12px 0;
+}
+
+.socials li {
+    margin: 0 20px;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--d3light) !important;
+    font-size: 14px;
+    word-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.footer-content h3 {
+    color: var(--d3light) !important;
+}
+
+.footer-bottom a {
+    color: var(--d3light);
+    text-decoration: none;
+    font-style: italic;
+}
+
+.footer-bottom a:hover {
+    color: var(--d3light);
+    text-decoration: underline;
+}
+
+#backtotop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 99;
+    color: var(--d3light);
+    border: 1px solid black;
+    outline: none;
+    background-color: var(--secondary);
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    border-radius: 25px;
+}
+
+.socials > li i {
+    font-size: 28px;
+    color: var(--d3light);
+    transition: 0.3s;
+}
+
+#gh:hover {
+    color: #323131;
+}
+
+#ig:hover {
+    color: #be4bdb;
+}
+
+#tw:hover {
+    color: #1da1f2;
+}
+
+#yt:hover {
+    color: #f00;
+}
+
+#fb:hover {
+    color: #1877f2;
+}

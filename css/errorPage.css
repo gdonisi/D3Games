@@ -1,0 +1,35 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: white;
+    color: var(--primary);
+    margin: 0;
+}
+
+#main {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+#main:hover {
+    cursor: pointer;
+}
+
+.err {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.err h1 {
+    font-size: 50px;
+    display: inline-block;
+    padding-right: 12px;
+}
+
+.err h1 span {
+    font-size: 20px;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <title>Carrello - D3Games</title>
+    <meta content="E-Commerce di videogiochi" name="description">
+    <meta content="#6e00ee" name="theme-color">
+    <link href="images/favicon.png" rel="icon" type="image/png"/>
+    <meta content="height=device-height, width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/scripts.js"></script>
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light py-0" id="header" style="background-color: var(--primary);">
+    <div class="container-fluid" id="header-container">
+        <a class="navbar-brand" href="/D3Games">
+            <img alt="logo" class="d-inline-block align-text-top" height="72" loading="lazy" src="images/favicon.png"
+                 width="72"></a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link" href="/D3Games"><i class="bi bi-house-fill"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                       id="navbarDropdown0" role="button">
+                        <i class="bi bi-tag-fill"></i> Categorie
+                    </a>
+                    <ul aria-labelledby="navbarDropdown0" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="categoria?c=action-adventure">Action-adventure</a></li>
+                        <li><a class="dropdown-item" href="categoria?c=rpg">RPG</a></li>
+                        <li><a class="dropdown-item" href="categoria?c=platform">Platform</a></li>
+                        <li><a class="dropdown-item" href="categoria?c=sparatutto">Sparatutto</a></li>
+                        <li><a class="dropdown-item" href="categoria?c=sport">Sport</a></li>
+                        <li><a class="dropdown-item" href="categoria?c=guida">Guida</a></li>
+                        <li><a class="dropdown-item" href="categoria?c=picchiaduro">Picchiaduro</a></li>
+                        <li><a class="dropdown-item" href="categoria?c=simulazione">Simulazione</a></li>
+                        <li><a class="dropdown-item" href="categoria?c=strategia">Strategia</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                       id="navbarDropdown1" role="button">
+                        <i class="bi bi-joystick"></i> Piattaforme
+                    </a>
+                    <ul aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="piattaforma?p=ps5"><i class="bi bi-playstation"></i>
+                            PlayStation 5</a></li>
+                        <li><a class="dropdown-item" href="piattaforma?p=seriesx"><i class="bi bi-xbox"></i> Xbox Series
+                            X|S</a></li>
+                        <li><a class="dropdown-item" href="piattaforma?p=switch"><i class="bi bi-nintendo-switch"></i>
+                            Nintendo Switch</a></li>
+                        <li><a class="dropdown-item" href="piattaforma?p=pc"><i class="bi bi-pc-display"></i> PC</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="piattaforma?p=ps4"><i class="bi bi-playstation"></i>
+                            PlayStation 4</a></li>
+                        <li><a class="dropdown-item" href="piattaforma?p=xboxone"><i class="bi bi-xbox"></i> Xbox
+                            One</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form action="cerca" class="d-flex" onsubmit="return cerca()">
+                <input aria-label="Search" class="form-control me-2" id="cercaInput" name="nome" placeholder="Cerca"
+                       type="search">
+                <div id="s-res">
+                    <ul id="results"></ul>
+                </div>
+                <button class="btn btn-outline-light" id="cercaBtn" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                       id="navbarDropdown2" role="button">
+                        <i class="bi bi-person-fill"></i> Mario
+                    </a>
+                    <ul aria-labelledby="navbarDropdown2" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="profilo"><i class="bi bi-person-lines-fill"></i> Account</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carrello"><i class="bi bi-cart-fill"></i> Carrello</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-xxl my-5">
+    <div class="text-center my-2">
+        <span>Totale: €88.89</span>
+        <a href="conferma_ordine">
+            <button class="btn mx-2" type="button">Procedi all'ordine</button>
+        </a>
+    </div>
+
+    <table class="table table-bordered border-secondary table-striped table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Prodotto</th>
+            <th scope="col">Quantità</th>
+            <th scope="col">Prezzo</th>
+            <th scope="col">Rimuovi</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"><a href="videogioco?id=22">It Takes Two</a></th>
+            <td><span>1</span></td>
+            <td><span class="total">€23.99</span></td>
+            <td>
+                <button class="btn btn-secondary" disabled type="submit">Rimuovi</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="videogioco?id=13">Cuphead</a></th>
+            <td><span>1</span></td>
+            <td><span class="total">€17.99</span></td>
+            <td>
+                <button class="btn btn-secondary" disabled type="submit">Rimuovi</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="videogioco?id=6">Animal Crossing: New Horizons</a></th>
+            <td><span>1</span></td>
+            <td><span class="total">€46.91</span></td>
+            <td>
+                <button class="btn btn-secondary" disabled type="submit">Rimuovi</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
