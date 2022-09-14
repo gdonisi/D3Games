@@ -121,12 +121,12 @@
     $(document).ready(function () {
         let c = getUrlVars()['c'];
         if (c === undefined)
-            window.location.href = "400.html";
+            window.location.href = "400";
 
         let categories = ["Action-adventure", "RPG", "Platform", "Sparatutto", "Sport", "Guida", "Picchiaduro", "Simulazione", "Strategia"];
         const categoria = (c === "rpg") ? "RPG" : c.charAt(0).toUpperCase() + c.slice(1);
         if (!categories.includes(categoria))
-            window.location.href = "400.html";
+            window.location.href = "400";
         $('#page_header').append(categoria);
 
         $.getJSON('assets/games.json', function (data) {

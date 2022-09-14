@@ -121,11 +121,11 @@
     $(document).ready(function () {
         let p = getUrlVars()['p'];
         if (p === undefined)
-            window.location.href = "400.html";
+            window.location.href = "400";
 
         const piattaforma = getPlatformName(p);
         if (piattaforma === "null")
-            window.location.href = "400.html";
+            window.location.href = "400";
         $('#page_header').append(piattaforma);
 
         $.getJSON('assets/games.json', function (data) {

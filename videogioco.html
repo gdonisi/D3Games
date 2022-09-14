@@ -164,7 +164,7 @@
         $.getJSON('assets/games.json', function (data) {
             let id = getUrlVars()['id'];
             if (id === undefined || id < 1 || id > 34)
-                window.location.href = "400.html";
+                window.location.href = "400";
 
             let game = data[id - 1];
             $(document).prop('title', game['nome'] + " - D3Games");

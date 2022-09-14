@@ -42,7 +42,7 @@ $(document).ready(function () {
             let found = false;
             let counter = 0;
             data.forEach(function (item) {
-                if (counter < 10) {
+                if (counter < 5) {
                     if (findString(query, item["nome"].toLowerCase())) {
                         results.append("<li><a href='videogioco?id=" + item["codice"] + "'>" + item["nome"] + "</a></li>");
                         found = true;

@@ -207,8 +207,8 @@
 </div>
 <script>
     $(document).ready(function () {
-        const featured_ids = [1, 7, 11, 5, 22, 12, 23, 13, 30, 6];
-        const most_voted_ids = [29, 3, 28, 15, 19];
+        const featured_ids = [1, 7, 11, 5, 22, 12, 23, 28, 30, 6];
+        const most_voted_ids = [29, 3, 19, 15, 13];
         $.getJSON('assets/games.json', function (data) {
             featured_ids.forEach(function (item) {
                 $('#featured').append(getDivFromGame(data[item - 1]));
